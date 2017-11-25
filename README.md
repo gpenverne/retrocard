@@ -21,13 +21,13 @@ Install services:
 ``bash
 sudo systemctl daemon-reload
 sudo systemctl start retrocard.mount.service
-sudo systemctl enable retrocard.mount.service
+sudo systemctl enable retrocard.mount.service  
 
 sudo systemctl start retrocard.umount.service
 sudo systemctl enable retrocard.umount.service
 ``
 
-Chmod +x ``launch.sh`` and ``kill-emulator.sh`` 
+Chmod +x ``launch.sh`` and ``kill-emulator.sh``
 
 ## Create the key
 
