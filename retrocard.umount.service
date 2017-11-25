@@ -1,0 +1,10 @@
+[Unit]
+Description=Mount retrocard usb keys
+Requires=media-usb0.umount
+After=media-usb0.umount
+
+[Service]
+ExecStart=/usr/bin/emulationstation
+
+[Install]
+WantedBy=media-usb0.umount

@@ -1,9 +1,13 @@
-`
-echo 'ACTION=="add", KERNEL=="sd*[!0-9]",RUN+="/usr/bin/sudo /home/pi/retrocard/launch.sh"' > /lib/udev/rules.d/99-retrocard.rules
-udevadm control --reload-rules
+``
+sudo cp retrocard.mount.service /etc/systemd/system/retrocard.mount.service
+sudo cp retrocard.umount.service /etc/systemd/system/retrocard.umount.service
 
+sudo systemctl daemon-reload
+sudo systemctl start retrocard.mount.service
+sudo systemctl enable retrocard.mount.service
 
+sudo systemctl start retrocard.umount.service
+sudo systemctl enable retrocard.umount.service
 
-
-/opt/retropie/supplementary/runcommand/runcommand.sh 0 _SYS_ snes /path/to/ROM
+``
 
