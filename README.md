@@ -16,7 +16,7 @@ Plug a usbdrive with "RETROCARD" as label
 
 ### Using the install script
 ```shell
-sudo mkdir /home/pi/retrocard/install.sh
+sudo /home/pi/retrocard/install.sh
 ```
 
 ### Manual installation
