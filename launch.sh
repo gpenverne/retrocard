@@ -2,8 +2,9 @@
 #!/
 /usr/bin/cec-client &
 /home/pi/retrocard/kill-emulator.sh
+
 echo "LAUNCHING" > /tmp/retrocard.log
-USBPATH="/media/retrocard"
+USBPATH="/media/usb0"
 RETROCARD_PATH="$USBPATH/.retrocard"
 if [ ! -d "$RETROCARD_PATH" ]; then
     exit

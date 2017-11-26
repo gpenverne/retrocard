@@ -8,13 +8,13 @@ Just plug the usb drive/key to your retropie, it will launch the rom inside, lik
 
 Clone this repo to ``/home/pi/retrocard``
 
+Plug a usbdrive
+
 Copy services:
 
 ```shell
-sudo cp retrocard.mount.service /etc/systemd/system/retrocard.mount.service
-sudo cp retrocard.umount.service /etc/systemd/system/retrocard.umount.service
-sudo cp retrocard.mount.service /etc/systemd/system/retrocard.mount.service
-sudo cp retrocard.umount.service /etc/systemd/system/retrocard.umount.service
+sudo ln -s /home/pi/retrocard/retrocard.mount.service /etc/systemd/system/retrocard.mount.service
+sudo ln -s /home/pi/retrocard/retrocard.umount.service /etc/systemd/system/retrocard.umount.service
 ```
 
 Install services:
