@@ -1,0 +1,10 @@
+[Unit]
+DefaultDependencies=no
+Description=Launch from retrocard
+After=media-retrocard.mount
+
+[Service]
+ExecStart=/home/pi/retrocard/launch.sh
+
+[Install]
+WantedBy=media-retrocard.mount

@@ -1,10 +1,11 @@
 [Unit]
-Description=Mount retrocard usb keys
-Requires=media-usb0.umount
-After=media-usb0.umount
+DefaultDependencies=no
+Description=Relaunch emulationstation after retrocard usb keys unmount
+Before=local-fs.target umount.target
+Conflicts=umount.target
 
 [Service]
-ExecStart=/usr/bin/emulationstation
+ExecStart=/home/pi/retrocard/relaunch-emulation-station.sh
 
 [Install]
-WantedBy=media-usb0.umount
+WantedBy=local-fs.target

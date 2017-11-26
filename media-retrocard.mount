@@ -1,0 +1,9 @@
+[Unit]
+Description=Mount retrocard usb keys on RETROCARD folder
+
+[Mount]
+What=/dev/disk/by-label/RETROCARD
+Where=/media/retrocard
+
+[Install]
+WantedBy=local-fs.target
