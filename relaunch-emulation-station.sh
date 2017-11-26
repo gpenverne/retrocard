@@ -6,5 +6,5 @@ if [ ! -f "$RETROCARD_PATH_LOG" ]; then
 fi
 
 rm $RETROCARD_PATH_LOG
-/home/pi/retrocard/kill-emulator.sh
-/usr/bin/emulationstation
+/home/pi/retrocard/kill-emulator.sh &
+/usr/bin/sudo -u pi /usr/bin/emulationstation
