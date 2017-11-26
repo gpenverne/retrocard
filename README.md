@@ -7,8 +7,19 @@ Just plug the usb drive/key to your retropie, it will launch the rom inside, lik
 ## How to?
 
 Clone this repo to ``/home/pi/retrocard``
+```shell
+cd /home/pi
+git clone https://github.com/gpenverne/retrocard.git
+```
 
 Plug a usbdrive with "RETROCARD" as label
+
+### Using the install script
+```shell
+sudo mkdir /home/pi/retrocard/install.sh
+```
+
+### Manual installation
 
 Create the mount point:
 
@@ -37,7 +48,7 @@ sudo systemctl start retrocard.umount.service
 sudo systemctl enable retrocard.umount.service
 ```
 
-Chmod +x ``launch.sh`` and ``kill-emulator.sh``
+Chmod +x ``launch.sh`` and ``kill-emulator.sh`` and ``relaunch-emulation-station.sh``
 
 ## Create the key
 
