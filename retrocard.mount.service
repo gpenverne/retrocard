@@ -1,10 +1,10 @@
 [Unit]
 Description=Mount retrocard usb keys on RETROCARD folder
-Requires=target.mount
-Before=target.mount
+Requires=mount.target
+Before=mount.target
 
 [Install]
-WantedBy=target.mount
+WantedBy=mount.target
 
 [Mount]
 What=/dev/disk/by-label/RETROCARD
