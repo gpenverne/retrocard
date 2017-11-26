@@ -1,10 +1,8 @@
 [Unit]
+DefaultDependencies=no
 Description=Mount retrocard usb keys on RETROCARD folder
 Requires=mount.target
 Before=mount.target
-
-[Install]
-WantedBy=mount.target
 
 [Mount]
 What=/dev/disk/by-label/RETROCARD
