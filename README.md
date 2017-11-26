@@ -13,7 +13,7 @@ Plug a usbdrive with "RETROCARD" as label
 Create the mount point:
 
 ```shell
-mkdir /media/RETROCARD
+sudo mkdir /media/RETROCARD
 ```
 
 Copy services:
