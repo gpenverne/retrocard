@@ -20,7 +20,7 @@ Copy services:
 
 ```shell
 sudo cp /home/pi/retrocard/retrocard.launch.service /lib/systemd/system/retrocard.launch.service
-sudo cp /home/pi/retrocard/retrocard.mount.service /lib/systemd/system/retrocard.mount.service
+sudo cp /home/pi/retrocard/media-retrocard.mount /lib/systemd/system/media-retrocard.mount
 sudo cp /home/pi/retrocard/retrocard.umount.service /lib/systemd/system/retrocard.umount.service
 ```
 
@@ -30,8 +30,8 @@ sudo systemctl daemon-reload
 sudo systemctl start retrocard.launch.service
 sudo systemctl enable retrocard.launch.service  
 
-sudo systemctl start retrocard.mount.service
-sudo systemctl enable retrocard.mount.service  
+sudo systemctl start media-retrocard.mount.service
+sudo systemctl enable media-retrocard.mount.service  
 
 sudo systemctl start retrocard.umount.service
 sudo systemctl enable retrocard.umount.service
