@@ -33,7 +33,9 @@ Chmod +x ``launch.sh`` and ``kill-emulator.sh``
 
 Have a look on the "SAMPLE" folder in this folder.
 
+Your usb key should have "retrocard" as label
+
 - ``/rom.gba`` is a gba rom (empty, it is just an example, you have to replace it with the rom of your choice)
 - ``/.retrocard`` folder contains two files:
-- ``/.retrocard/ROM`` will contain the name of your rom file (rom.gba, bomberman.snes or what you want)
+- ``/.retrocard/ROM`` will contain the relative (from the / of your usb key) path of your rom file (rom.gba, bomberman.snes or what you want)
 - ``/.retrocard/SYSTEM`` will contain the name of the system (gba, snes) to launch the appropriate emulator (according to retropie)
