@@ -13,8 +13,8 @@ Plug a usbdrive
 Copy services:
 
 ```shell
-sudo ln -s /home/pi/retrocard/retrocard.mount.service /etc/systemd/system/retrocard.mount.service
-sudo ln -s /home/pi/retrocard/retrocard.umount.service /etc/systemd/system/retrocard.umount.service
+sudo ln -s /home/pi/retrocard/retrocard.mount.service /lib/systemd/system/retrocard.mount.service
+sudo ln -s /home/pi/retrocard/retrocard.umount.service /lib/systemd/system/retrocard.umount.service
 ```
 
 Install services:
