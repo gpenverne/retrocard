@@ -1,10 +1,10 @@
 [Unit]
 Description=Relaunch emulationstation after retrocard usb keys unmount
-Requires=media-usb.umount
-After=media-usb.umount
+Requires=media-RETROCARD.umount
+After=media-RETROCARD.umount
 
 [Service]
 ExecStart=/usr/bin/emulationstation
 
 [Install]
-WantedBy=media-usb.umount
+WantedBy=media-RETROCARD.umount

@@ -4,7 +4,7 @@
 /home/pi/retrocard/kill-emulator.sh
 
 echo "LAUNCHING" > /tmp/retrocard.log
-USBPATH="/media/usb0"
+USBPATH="/media/RETROCARD"
 RETROCARD_PATH="$USBPATH/.retrocard"
 if [ ! -d "$RETROCARD_PATH" ]; then
     exit

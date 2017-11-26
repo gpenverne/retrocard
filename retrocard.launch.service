@@ -1,0 +1,10 @@
+[Unit]
+Description=Launch from retrocard
+Requires=target.mount
+After=target.mount
+
+[Service]
+ExecStart=/home/pi/retrocard/launch.sh
+
+[Install]
+WantedBy=target.mount
