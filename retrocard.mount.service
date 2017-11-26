@@ -1,10 +1,10 @@
 [Unit]
 Description=Mount retrocard usb keys
-Requires=media-retrocard.mount
-After=media-retrocard.mount
+Requires=media-usb0.mount
+After=media-usb0.mount
 
 [Service]
 ExecStart=/home/pi/retrocard/launch.sh
 
 [Install]
-WantedBy=media-retrocard.mount
+WantedBy=media-usb0.mount
