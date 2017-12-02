@@ -62,7 +62,7 @@ Your usb key should have "RETROCARD" as label
 - ``/.retrocard/SYSTEM`` will contain the name of the system (gba, snes) to launch the appropriate emulator (according to retropie)
 
 
-## Using cdrom/dvd
+## Using cdrom
 
 Have a look on the "mount-cdrom-as-retrocard.sh" . This script will mount cdrom to /media/retrocard (if label matches)
 
