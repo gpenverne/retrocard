@@ -69,7 +69,7 @@ Have a look on the "mount-cdrom-as-retrocard.sh" . This script will mount cdrom 
 You just have to add a udev rule to your udev rules:
 
 ```shell
-sudo cp /media/pi/retrocard/99-disc_script.rules /usr/lib/udev/rules.d/99-disc_script.rules
+sudo cp /home/pi/retrocard/99-disc_script.rules /etc/udev/rules.d/99-disc_script.rules
 sudo chmod +x /home/pi/retrocard/mount-cdrom-as-retrocard.sh
-sudo udevadm control –reload
+sudo udevadm control --reload
 ```

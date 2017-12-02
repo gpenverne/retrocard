@@ -20,6 +20,6 @@ chmod +x /home/pi/retrocard/launch.sh
 chmod +x /home/pi/retrocard/kill-emulator.sh
 chmod +x /home/pi/retrocard/relaunch-emulation-station.sh
 
-cp /media/pi/retrocard/99-disc_script.rules /usr/lib/udev/rules.d/99-disc_script.rules
+cp /home/pi/retrocard/99-disc_script.rules /etc/udev/rules.d/99-disc_script.rules
 chmod +x /home/pi/retrocard/mount-cdrom-as-retrocard.sh
-udevadm control –reload
+udevadm control --reload
