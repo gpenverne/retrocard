@@ -60,3 +60,16 @@ Your usb key should have "RETROCARD" as label
 - ``/.retrocard`` folder contains two files:
 - ``/.retrocard/ROM`` will contain the relative (from the / of your usb key) path of your rom file (rom.gba, bomberman.snes or what you want)
 - ``/.retrocard/SYSTEM`` will contain the name of the system (gba, snes) to launch the appropriate emulator (according to retropie)
+
+
+## Using cdrom/dvd
+
+Have a look on the "mount-cdrom-as-retrocard.sh" . This script will mount cdrom to /media/retrocard (if label matches)
+
+You just have to add a udev rule to your udev rules:
+
+```shell
+sudo cp /media/pi/retrocard/99-disc_script.rules /usr/lib/udev/rules.d/99-disc_script.rules
+sudo chmod +x /home/pi/retrocard/mount-cdrom-as-retrocard.sh
+sudo udevadm control –reload
+```
