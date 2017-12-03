@@ -73,3 +73,12 @@ sudo cp /home/pi/retrocard/99-disc_script.rules /etc/udev/rules.d/99-disc_script
 sudo chmod +x /home/pi/retrocard/mount-cdrom-as-retrocard.sh
 sudo udevadm control --reload
 ```
+
+## Launch rom from command line
+
+Not the main purpose of this repo, but with it, you can launch rom from specific system and rom path from command line, using the launch.sh script:
+/home/pi/retrocard/launch.sh system /path/to/rom 
+
+```shell
+/home/pi/retrocard/launch.sh snes /home/pi/RetroPie/roms/snes/my-rom.sfc
+```

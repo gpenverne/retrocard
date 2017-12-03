@@ -1,20 +1,25 @@
 #!/bin/bash
-#!/
+
 /usr/bin/cec-client &
 /home/pi/retrocard/kill-emulator.sh
 
 echo "LAUNCHING" > /tmp/retrocard.log
 USBPATH="/media/retrocard"
 RETROCARD_PATH="$USBPATH/.retrocard"
-if [ ! -d "$RETROCARD_PATH" ]; then
-    exit
+if [ $# -eq 0 ]; then
+    if [ ! -d "$RETROCARD_PATH" ]; then
+        exit
+    fi
+    SYSTEM_PLATFORM=`cat $RETROCARD_PATH/SYSTEM`
+    ROM_FILE=`cat $RETROCARD_PATH/ROM`
+    ROM_PATH="$USBPATH/$ROM_FILE"
+else
+    SYSTEM_PLATFORM=$1
+    ROM_PATH=$2
+    USBPATH=""
 fi
 
 RETROPIE_RUNCOMMAND_PATH="sudo /opt/retropie/supplementary/runcommand/runcommand.sh 1 _SYS_"
-SYSTEM_PLATFORM=`cat $RETROCARD_PATH/SYSTEM`
-ROM_FILE=`cat $RETROCARD_PATH/ROM`
-ROM_PATH="$USBPATH/$ROM_FILE"
-
 LAUNCH_COMMAND="$RETROPIE_RUNCOMMAND_PATH $SYSTEM_PLATFORM $ROM_PATH $USBPATH"
 echo $LAUNCH_COMMAND >> /tmp/retrocard.log
 $LAUNCH_COMMAND > /dev/null
