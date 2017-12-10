@@ -4,10 +4,7 @@ RETROCARD_PATH_LOG="/tmp/retrocard.log"
 if [ ! -f "$RETROCARD_PATH_LOG" ]; then
     exit
 fi
-if [ -d "/media/retrocard/.retrocard" ]; then
-    exit
-fi
 rm $RETROCARD_PATH_LOG
 /home/pi/retrocard/kill-emulator.sh
-sudo openvt -c 1 -s -f emulationstation 2>&1
+openvt -c 1 -s -f emulationstation 2>&1
 echo "" > /tmp/es-restart && killall emulationstation
