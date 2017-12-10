@@ -29,4 +29,3 @@ RUNCOMMAND=${RUNCOMMAND:11}
 killall emulationstation
 echo $RUNCOMMAND >> /tmp/retrocard.log
 eval $RUNCOMMAND > /dev/null
-emulationstation
