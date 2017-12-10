@@ -10,4 +10,3 @@ fi
 rm $RETROCARD_PATH_LOG
 /home/pi/retrocard/kill-emulator.sh
 sudo openvt -c 1 -s -f emulationstation 2>&1
-echo "" > /tmp/es-restart && killall emulationstation
