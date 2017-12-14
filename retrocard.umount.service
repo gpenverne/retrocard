@@ -1,9 +1,0 @@
-[Unit]
-Description=Relaunch emulationstation after retrocard usb keys unmount
-After=media-retrocard.mount
-
-[Service]
-ExecStart=/home/pi/retrocard/relaunch-emulation-station.sh
-
-[Install]
-WantedBy=media-retrocard.mount
