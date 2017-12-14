@@ -4,7 +4,11 @@ Description=Launch from retrocard
 After=media-retrocard.mount
 
 [Service]
+Type=simple
+Restart=always
 ExecStart=/home/pi/retrocard/launch.sh
+#ExecStop=/home/pi/retrocard/relaunch-emulation-station.sh
 
 [Install]
 WantedBy=media-retrocard.mount
+

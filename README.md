@@ -32,7 +32,6 @@ Copy services:
 ```shell
 sudo cp /home/pi/retrocard/retrocard.launch.service /lib/systemd/system/retrocard.launch.service
 sudo cp /home/pi/retrocard/media-retrocard.mount /lib/systemd/system/media-retrocard.mount
-sudo cp /home/pi/retrocard/retrocard.umount.service /lib/systemd/system/retrocard.umount.service
 ```
 
 Install services:
@@ -43,12 +42,9 @@ sudo systemctl enable retrocard.launch.service
 
 sudo systemctl start media-retrocard.mount
 sudo systemctl enable media-retrocard.mount  
-
-sudo systemctl start retrocard.umount.service
-sudo systemctl enable retrocard.umount.service
 ```
 
-Chmod +x ``launch.sh`` and ``kill-emulator.sh`` and ``relaunch-emulation-station.sh``
+Chmod +x ``*.sh``
 
 ## Create the key
 
